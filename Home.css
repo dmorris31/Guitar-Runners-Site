@@ -18,7 +18,7 @@ li {
 }
 
 .main-nav {
-    width: 250px; background: ##916E99;
+    width: 250px; background: #916E99;
     position: absolute;
 }
 
@@ -31,7 +31,7 @@ li {
 	border-bottom: 1px dotted gray;
 }
 
-.main-nav a:hover {background: ##916E99;}
+.main-nav a:hover {background: #916E99;}
 .main-nav-ul ul {display: none;}
 .main-nav-ul li:hover ul {display: block;}
 
@@ -98,7 +98,7 @@ h4{
 }
 
 .options{
-    background-color: ##916E99;
+    background-color: #916E99;
     position: relative;
     width: 200px;
     height:200px;
