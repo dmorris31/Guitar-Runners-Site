@@ -25,5 +25,68 @@
     </a>
   </div>
   <!-- END OF NAV BAR -->
+
+    <h1>Merch</h1>
+
+    <!-- search bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search guitars..." onkeyup="searchProducts()">
+    </div>
+    <!-- end of search bar -->
+
+    <!-- product container -->
+    <div class="container" id="productContainer">
+        <div class="product">
+            <img src="path_to_image1.jpg" alt="Product Image 1">
+            <h2> Logo T-shirt</h2>
+            <p class="price">$41.99</p>
+            <div class="colors">
+                <div class="color-circle red"></div>
+                <div class="color-circle blue"></div>
+                <div class="color-circle black"></div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="path_to_image2.jpg" alt="Product Image 2">
+            <h2>Long-sleeve Logo T-shirt</h2>
+            <p class="price">$41.99</p>
+            <div class="colors">
+                <div class="color-circle white"></div>
+                <div class="color-circle black"></div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="path_to_image3.jpg" alt="Product Image 3">
+            <h2>Children's T-shirt</h2>
+            <p class="price">$41.99</p>
+            <div class="colors">
+                <div class="color-circle sunburst"></div>
+            </div>
+        </div>
+        <!-- add more products here if needed -->
+    </div>
+
+<!--  js functions -->
+<script>
+        function searchProducts() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let container = document.getElementById('productContainer');
+            let products = container.getElementsByClassName('product');
+            let title;
+
+            for (let i = 0; i < products.length; i++) {
+                title = products[i].getElementsByTagName("h2")[0];
+                if (title.textContent.toUpperCase().indexOf(filter) > -1) {
+                    products[i].style.display = "";
+                } else {
+                    products[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+
 </body>
 </html>
