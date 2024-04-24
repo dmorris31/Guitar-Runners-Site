@@ -25,5 +25,70 @@
     </a>
   </div>
   <!-- END OF NAV BAR -->
+<div class="container">
+        <h2>Guitar Shop Discussion Board</h2>
+        <form>
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <textarea name="subject" placeholder="Write your topic..." required></textarea>
+            <input type="submit" value="Submit Topic">
+        </form>
+</div>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const title = this.title.value.trim();
+                const name = this.name.value.trim();
+                const subject = this.subject.value.trim();
+                if (title && name && subject) {
+                    addTopic(title, name, subject);
+                    this.reset();
+                }
+            });
+        });
+
+        function addTopic(title, name, subject) {
+            const container = document.querySelector('.container');
+            const postHtml = `
+                <div class="post">
+                    <h3>${title}</h3>
+                    <p>Posted by ${name} at ${getCurrentTime()}</p>
+                    <p>${subject}</p>
+                    <div class="comments"></div>
+                    <form onsubmit="addComment(event, this)">
+                        <textarea name="reply" placeholder="Reply to this topic..." required></textarea>
+                        <input type="submit" value="Submit Reply">
+                    </form>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', postHtml);
+        }
+
+        function addComment(event, form) {
+            event.preventDefault();
+            const textArea = form.querySelector('textarea');
+            const comment = textArea.value;
+            if (comment) {
+                const commentsContainer = form.previousElementSibling;
+                const commentHtml = `
+                    <div class="comment">
+                        <p><strong>Anonymous:</strong> ${comment} - Posted at ${getCurrentTime()}</p>
+                    </div>
+                `;
+                commentsContainer.insertAdjacentHTML('beforeend', commentHtml);
+                textArea.value = '';
+            }
+        }
+
+        function getCurrentTime() {
+            const now = new Date();
+            return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+    </script>
+
+
+
+
 </body>
 </html>
