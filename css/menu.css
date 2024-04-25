@@ -1,33 +1,53 @@
-.topnav {
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #916E99;
-  overflow: hidden;
-
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure navbar stays on top */
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 5%;
+}
+
+.pages {
+  display: flex;
+  margin-right: 5%;
+}
+
+.pages a {
+  color: white;
   text-decoration: none;
-  font-size: 17px;
+  padding: 10px 12px; /* Adjust padding for smaller options */
+  font-size: 14px; /* Adjust font size for smaller options */
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
+.pages a:hover {
   background-color: #58445d;
-  color: rgb(250, 250, 250);
+  border-radius: 10px;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
+.pages a.active {
   background-color: #58445d;
   color: white;
+  border-radius: 10px;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+/* Responsive navigation icon */
+.navbar .icon {
   display: none;
 }
+
+
