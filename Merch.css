@@ -1,6 +1,6 @@
 body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: rgba(149, 110, 157, 0.196)/* Background color for the page */
             margin: 0;
             padding: 0px;
         }
@@ -10,7 +10,7 @@ body {
             gap: 100px;
         }
         .product {
-            background-color: white;
+            background-color: #f8f5fa;
             border: 1px solid #ddd;
             padding: 10px;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
@@ -31,6 +31,7 @@ body {
             background-color: #bbb;
             border-radius: 50%;
             display: inline-block;
+            border: 1px solid black;
         }
         .red { background-color: #ff0000; }
         .blue { background-color: #0000ff; }
@@ -39,7 +40,6 @@ body {
         .green { background-color: #008000; }
         .yellow { background-color: #ffff00; }
         .grey { background-color: #808080; }
-        .sunburst { background-color: #cd8500; }
         img {
             width: 100%;
             border-radius: 5px;
