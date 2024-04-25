@@ -6,92 +6,126 @@
     <title>Repair</title>
     <link rel="stylesheet" href="Repair.css">
     <link rel="stylesheet" href="Menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+
+  </head>
+  <body>
 <!-- START OF NAV BAR -->
-
-<div class="topnav" id="myTopnav">
-  <a href="Home.html">Home</a>
-  <a href="About.html">About</a>
-  <a href="Shop.html">Shop</a>
-  <a href="Merch.html">Merch</a>
-  <a href="Repair.html" class="active">Repair</a>
-  <a href="FAQ.html">FAQ</a>
-  <a href="Discussion.html">Discussion</a>
-  <a href="Lessons.html">Lessons</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+<div class="navbar" id="myTopnav">
+  <div class="logo">GuitarRunners</div>
+  <div class="pages">
+    <a href="Home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Shop.html">Shop</a>
+    <a href="Merch.html">Merch</a>
+    <a href="Repair.html" class="active">Repair</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="Discussion.html">Discussion</a>
+    <a href="Lessons.html">Lessons</a>
+  </div>
 </div>
-
 <!-- END OF NAV BAR -->
 
 <div class="container">
-  <div class="main">
-    <div class="bottom">
-      <section class="services-section">
-        <h2>Our Services</h2>
-        <div class="tab">
-          <button class="tablinks" onclick="openService(event, 'Service1')">Service 1</button>
-          <button class="tablinks" onclick="openService(event, 'Service2')">Service 2</button>
-          <button class="tablinks" onclick="openService(event, 'Service3')">Service 3</button>
-        </div>
-        
-        <div id="Service1" class="tabcontent">
-          <h3>Service 1</h3>
-          <p>Description of Service 1.</p>
-        </div>
-        
-        <div id="Service2" class="tabcontent">
-          <h3>Service 2</h3>
-          <p>Description of Service 2.</p>
-        </div>
-        
-        <div id="Service3" class="tabcontent">
-          <h3>Service 3</h3>
-          <p>Description of Service 3.</p>
-        </div>
-      </section>
-    </div>
-    <div class="right">
-      <section class="repair-section">
-        <h2>Repair Request</h2>
-        <form action="submit_repair.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="instrument">Instrument:</label>
-            <input type="text" id="instrument" name="instrument" required><br>
-            <label for="issue">Issue:</label><br>
-            <textarea id="story" name="issue" rows="4" required></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
+
+
+  <div class="header">
+    <h1>Service</h1>
+  </div>
+
+
+  <div class="Location">
+    <section class="location-section">
+      <h2>Our Location</h2>
+      <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12017.716371427672!2d-81.35424353537638!3d41.14698739129907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88313adaaeda6679%3A0xddd9f3901cbcc433!2sKent%20State%20University!5e0!3m2!1sen!2sus!4v1713818637459!5m2!1sen!2sus"></iframe>
+      </div>
+      <h3>Address</h3>
+      <p>123 Main Street</p>
+      <p>Kent, Ohio 44240</p>
+      <h3>Phone</h3>
+      <a href="tel:123-456-7890">123-456-7890</a>
+  </section>
+  </div>
+
+
+  <div class="Repair">
+    <section class="repair-section">
+      <h2>Service Request</h2>
+      <form action="submit_repair.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="repair-type">Instrument:</label>
+          <select id="repair-type" name="repair-type" required>
+              <option value="">Select Instrument</option>
+              <option value="Maintenance">Guitar</option>
+              <option value="Tuning">Trumpet</option>
+              <option value="Repair">Drums</option>
+              <option value="Other">Other</option>
+          </select><br>
+          <label for="repair-type">Service Type:</label>
+          <select id="repair-type" name="repair-type" required>
+              <option value="">Select Service Type</option>
+              <option value="Maintenance">Maintenance</option>
+              <option value="Tuning">Tuning</option>
+              <option value="Repair">Repair</option>
+              <option value="Other">Other</option>
+          </select><br>
+          <label for="issue">Explain Issue:</label>
+          <textarea id="story" name="issue" rows="6" required></textarea><br>
+          <input type="submit" value="Submit">
+      </form>
+  </section>
+  </div>
+
+
+  <div class="service">
+    <section class="services-section">
+      <h2>Our Services</h2><br>
+      <div class="tab">
+        <button class="tablinks" onclick="openService(event, 'Service1')">Service 1</button>
+        <button class="tablinks" onclick="openService(event, 'Service2')">Service 2</button>
+        <button class="tablinks" onclick="openService(event, 'Service3')">Service 3</button>
+      </div>
+      
+      <div id="Service1" class="tabcontent">
+        <h3>Service 1</h3>
+        <p>Description of Service 1.</p>
+      </div>
+      
+      <div id="Service2" class="tabcontent">
+        <h3>Service 2</h3>
+        <p>Description of Service 2.</p>
+      </div>
+
+      <div id="Service3" class="tabcontent">
+        <h3>Service 3</h3>
+        <p>Description of Service 3.</p>
+      </div>
+
     </section>
-    </div>
-    <div class="left">
-      <section class="location-section">
-        <h2>Our Location</h2>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12017.716371427672!2d-81.35424353537638!3d41.14698739129907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88313adaaeda6679%3A0xddd9f3901cbcc433!2sKent%20State%20University!5e0!3m2!1sen!2sus!4v1713818637459!5m2!1sen!2sus"></iframe>
-        </div>
-        <p>Address: 123 Main Street, City, Country</p>
-        <p>Phone: 123-456-7890</p>
-    </section>
-    </div>
   </div>
 </div>
 
+<script>
+  function openService(evt, serviceName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(serviceName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
 
-
-<div class="container">
-  <div class="left">
-  </div>
-  <div class="right">
-
-  </div>
 </div>
+
 
 </body>
 </html>
