@@ -2,36 +2,47 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2; /* Background color for the page */
+ /* background-image: url('background.png'); */
+  background-color: rgba(149, 110, 157, 0.196)/* Background color for the page */
 }
 
 .container {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 0.3fr 6.5fr 0.0000002 12.1fr 0.2fr;
+  grid-template-rows: 2fr 0.1fr 7.4fr 0.5fr 4.7fr 0.2fr;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "main";
+    "header header header header header"
+    ". . . . ."
+    ". Location . Repair ."
+    ". . . . ."
+    ". service service service ."
+    ". . . . .";
 }
 
-.main {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "left right right"
-    "left right right"
-    "bottom bottom bottom";
-  grid-area: main;
+.header {
+  grid-area: header;
+  background-image: url('repair.jpg');
+  background-size: cover;
+  background-position: center bottom 20%;
+  border-bottom: 4px solid #916E99;
+  height: 190px;
+
 }
 
-.bottom { grid-area: bottom; }
+.Location { grid-area: Location; margin-top: 5px; }
 
-.right { grid-area: right; }
+.Repair { grid-area: Repair; margin-top: 5px }
 
-.left { grid-area: left; }
+.service { grid-area: service; }
+
+.header h1 {
+  color: white;
+  text-align: center;
+  margin-top: 90px;
+  text-shadow: 1px 1px 2px black;
+}
 
 
 .location-section {
@@ -39,18 +50,26 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 70%; /* Set width to 100% to fill the column */
-  margin-left: 30px;
-  margin-top: 20px;
+  height: 535px;
+  width: 320px;
 }
+
 
 .repair-section {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%; /* Set width to 100% to fill the column */
-  margin-top: 20px;
+  width: 900px;
+  height: 535px;
+
+}
+
+.services-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .map-container {
@@ -79,6 +98,17 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  resize: none;
+}
+
+form select {
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
 }
 
 form input[type="submit"] {
@@ -88,20 +118,12 @@ form input[type="submit"] {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  margin: auto;
 }
+
 
 form input[type="submit"]:hover {
   background-color: #58445d; /* Button background color on hover */
-}
-
-.services-section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 91.5%; /* Set width to 100% to fill the column */
-  margin-top: 20px;
-  margin-left: 30px;
 }
 
 /* Style the tabs */
@@ -138,3 +160,4 @@ form input[type="submit"]:hover {
 .tabcontent h3 {
   color: #58445d;
 }
+
