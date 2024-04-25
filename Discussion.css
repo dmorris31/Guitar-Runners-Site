@@ -1,16 +1,16 @@
 body,html {
             height: 100%;
             margin: 0;
-            color: white;
+            color: black;
             padding: 10px;
             font-family: Arial, sans-serif;
-            background-color: rgba(149, 110, 157, 0.196)/* Background color for the page */
+            background: #ebe2eb; /* Background color for the page */
             display: flex;
             justify-content: center; /* Center horizontally */
             align-items: center;     /* Center vertically */
         }
         .container {
-            background: #c6b4cb;
+            background: white;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             padding: 20px;
@@ -41,7 +41,7 @@ body,html {
         .post {
             background: #c6b4cb;
             border-radius: 10px;
-            padding: 10px;
+            padding: 20px;
             margin-bottom: 10px;
             color: black;
         }
