@@ -10,7 +10,9 @@
 </head>
 <!-- START OF NAV BAR -->
 <body>
-<div class="topnav" id="myTopnav">
+<div class="navbar" id="myTopnav">
+    <div class="logo">GuitarRunners</div>
+    <div class="pages">
     <a href="Home.html">Home</a>
     <a href="About.html">About</a>
     <a href="Shop.html">Shop</a>
@@ -19,75 +21,57 @@
     <a href="FAQ.html">FAQ</a>
     <a href="Discussion.html" class="active">Discussion</a>
     <a href="Lessons.html">Lessons</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
   </div>
+</div>
   <!-- END OF NAV BAR -->
+
+<div style="height: 75px;"></div> <!-- spacer -->
+
 <div class="container">
-        <h2>Guitar Shop Discussion Board</h2>
-        <form>
-            <input type="text" name="title" placeholder="Title" required>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <textarea name="subject" placeholder="Write your topic..." required></textarea>
-            <input type="submit" value="Submit Topic">
-        </form>
+     <h2>Discussion Board</h2>
+    <div style="height: 20px;"></div> <!-- spacer -->
+    <h3>Let's talk about all Things Guitars!</h3>
+    <div>
+        <input type="text" id="title" placeholder="Enter title">
+        <input type="text" id="name" placeholder="Your name">
+        <textarea id="subject" placeholder="Write your topic..."></textarea>
+        <button onclick="postTopic()">Post Topic</button>
+    </div>
+    <div id="forum"></div>
 </div>
 <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector("form").addEventListener("submit", function(event) {
-                event.preventDefault();
-                const title = this.title.value.trim();
-                const name = this.name.value.trim();
-                const subject = this.subject.value.trim();
-                if (title && name && subject) {
-                    addTopic(title, name, subject);
-                    this.reset();
-                }
-            });
-        });
+    function postTopic() {
+        const forum = document.getElementById('forum');
+        const title = document.getElementById('title').value;
+        const name = document.getElementById('name').value;
+        const subject = document.getElementById('subject').value;
+        const now = new Date().toLocaleString();
 
-        function addTopic(title, name, subject) {
-            const container = document.querySelector('.container');
-            const postHtml = `
-                <div class="post">
-                    <h3>${title}</h3>
-                    <p>Posted by ${name} at ${getCurrentTime()}</p>
-                    <p>${subject}</p>
-                    <div class="comments"></div>
-                    <form onsubmit="addComment(event, this)">
-                        <textarea name="reply" placeholder="Reply to this topic..." required></textarea>
-                        <input type="submit" value="Submit Reply">
-                    </form>
-                </div>
-            `;
-            container.insertAdjacentHTML('beforeend', postHtml);
-        }
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
+        postDiv.innerHTML = `<h3>${title}</h3><p>${subject}</p><p>Posted by <strong>${name}</strong> on <span class="post-time">${now}</span></p><div class="comments"></div><div class="add-comment"><input type="text" placeholder="Your name" class="comment-name"><textarea placeholder="Reply to this topic..." class="comment-text"></textarea><button onclick="postComment(this)">Reply</button></div>`;
 
-        function addComment(event, form) {
-            event.preventDefault();
-            const textArea = form.querySelector('textarea');
-            const comment = textArea.value;
-            if (comment) {
-                const commentsContainer = form.previousElementSibling;
-                const commentHtml = `
-                    <div class="comment">
-                        <p><strong>Anonymous:</strong> ${comment} - Posted at ${getCurrentTime()}</p>
-                    </div>
-                `;
-                commentsContainer.insertAdjacentHTML('beforeend', commentHtml);
-                textArea.value = '';
-            }
-        }
+        forum.appendChild(postDiv);
+        document.getElementById('title').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('subject').value = '';
+    }
 
-        function getCurrentTime() {
-            const now = new Date();
-            return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        }
-    </script>
+    function postComment(button) {
+        const name = button.previousElementSibling.previousElementSibling.value;
+        const text = button.previousElementSibling.value;
+        const now = new Date().toLocaleString();
 
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        commentDiv.innerHTML = `<p>${text}</p><p>Comment by <strong>${name}</strong> on <span class="comment-time">${now}</span></p>`;
 
+        const commentsContainer = button.parentElement.previousElementSibling;
+        commentsContainer.appendChild(commentDiv);
 
-
-    </body>
+        button.previousElementSibling.previousElementSibling.value = '';
+        button.previousElementSibling.value = '';
+    }
+</script>
+</body>
 </html>
