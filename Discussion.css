@@ -15,6 +15,8 @@ body,html {
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             padding: 20px;
             width: 80%;
+
+
             max-width: 600px;
         }
         input[type="text"], textarea {
@@ -41,6 +43,7 @@ body,html {
             border-radius: 10px;
             padding: 10px;
             margin-bottom: 10px;
+            color: black;
         }
         .comment {
             background: #ddd2e0;
@@ -48,10 +51,11 @@ body,html {
             padding: 8px;
             margin-left: 20px;
             margin-bottom: 5px;
+            color: black;
         }
         .time {
             font-size: 0.8em;
-            color: #555;
+            color: black;
         }
 * {
     padding:10; margin: 0;
