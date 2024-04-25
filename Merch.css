@@ -2,7 +2,7 @@ body {
             font-family: Arial, sans-serif;
             background-color: rgba(149, 110, 157, 0.196)/* Background color for the page */
             margin: 0;
-            padding: 0px;
+            padding: 10px;
         }
         .container {
             display: grid;
@@ -10,7 +10,7 @@ body {
             gap: 100px;
         }
         .product {
-            background-color: #f8f5fa;
+            background-color: white;
             border: 1px solid #ddd;
             padding: 10px;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
