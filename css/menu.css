@@ -1,0 +1,53 @@
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #916E99;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure navbar stays on top */
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 5%;
+}
+
+.pages {
+  display: flex;
+  margin-right: 5%;
+}
+
+.pages a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 12px; /* Adjust padding for smaller options */
+  font-size: 14px; /* Adjust font size for smaller options */
+}
+
+.pages a:hover {
+  background-color: #58445d;
+  border-radius: 10px;
+}
+
+.pages a.active {
+  background-color: #58445d;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Responsive navigation icon */
+.navbar .icon {
+  display: none;
+}
+
+
