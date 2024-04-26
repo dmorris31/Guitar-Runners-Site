@@ -2,86 +2,71 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
- /* background-image: url('background.png'); */
-  background-color: rgba(149, 110, 157, 0.196)/* Background color for the page */
+  background-color: rgba(149, 110, 157, 0.196);
 }
 
-.container {  display: grid;
-  grid-template-columns: 0.3fr 6.5fr 0.0000002 12.1fr 0.2fr;
-  grid-template-rows: 2fr 0.1fr 7.4fr 0.5fr 4.7fr 0.2fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "header header header header header"
-    ". . . . ."
-    ". Location . Repair ."
-    ". . . . ."
-    ". service service service ."
-    ". . . . .";
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  min-width: 700px; /* Adjust minimum width as needed */
 }
 
 .header {
-  grid-area: header;
-  background-image: url('repair.jpg');
+  grid-column: 1 / -1;
+  background-image: url('devonmedia/repair.jpg');
   background-size: cover;
+  height: 170px; /* Adjust height as needed */
   background-position: center bottom 20%;
   border-bottom: 4px solid #916E99;
-  height: 190px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px; /* Adjust margin to compensate for removing padding */
+  margin-right: -20px; /* Adjust margin to compensate for removing padding */
 }
-
-.Location { grid-area: Location; margin-top: 5px; }
-
-.Repair { grid-area: Repair; margin-top: 5px }
-
-.service { grid-area: service; }
 
 .header h1 {
-  color: white;
+  color: #ffffff;
   text-align: center;
-  margin-top: 90px;
   text-shadow: 1px 1px 2px black;
+  margin: 0; /* Remove default margin */
+  margin-top: 30px;
 }
 
-
-.location-section {
+.Location,
+.Repair,
+.service {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 535px;
-  width: 320px;
 }
 
-
-.repair-section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 900px;
-  height: 535px;
-
+.Location {
+  grid-column: span 1;
 }
 
-.services-section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.Repair {
+  grid-column: 2 / -1; 
+}
+
+.service {
+  grid-column: 1 / -1;
 }
 
 .map-container {
-  height: 300px; /* Adjust map container height as needed */
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
-  border-radius: 20px; /* Optional: Add border radius to match section */
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .map-container iframe {
   width: 100%;
-  height: 100%; /* Set iframe to fill map container */
-  border: none; /* Remove iframe border */
+  height: 100%;
+  border: none;
 }
 
 form label {
@@ -103,30 +88,26 @@ form textarea {
 
 form select {
   width: 100%;
-  padding: 10px 10px;
+  padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
   resize: none;
+  cursor: pointer;
 }
 
+
 form input[type="submit"] {
-  background-color: #916E99; /* Button background color */
-  color: #fff; /* Button text color */
+  background-color: #916E99;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin: auto;
+  margin-top: 10px;
 }
 
-
-form input[type="submit"]:hover {
-  background-color: #58445d; /* Button background color on hover */
-}
-
-/* Style the tabs */
 .tab {
   overflow: hidden;
   border-bottom: 1px solid #ccc;
@@ -157,7 +138,19 @@ form input[type="submit"]:hover {
   border-top: none;
 }
 
-.tabcontent h3 {
-  color: #58445d;
+.tabcontent p {
+  width: 75%;
 }
 
+.picture {
+  float: right;
+  object-fit: cover;
+  border-radius: 5px;
+  height: 200px;
+  width: 200px;
+  margin-top: -120px;
+}
+
+.tabcontent h3 {
+  color: #000000;
+}
