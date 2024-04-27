@@ -7,7 +7,8 @@ body {
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 100px;
+            gap: 220px;
+
         }
         .product {
             background-color: white;
@@ -15,6 +16,8 @@ body {
             padding: 10px;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
             border-radius: 10px;
+            width: 300px;  /* container width */
+            height: 365px; /* container height */
         }
         h2 {
             color: #333;
@@ -40,6 +43,7 @@ body {
         .green { background-color: #008000; }
         .yellow { background-color: #ffff00; }
         .grey { background-color: #808080; }
+        .pink { background-color: #ff6699; }
         img {
             width: 100%;
             border-radius: 5px;
