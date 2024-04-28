@@ -32,6 +32,16 @@ body {
     position: relative;
 }
 
+.intext{
+    text-decoration: none;
+    font-style: italic;
+
+}
+
+a.intext:hover{
+    color:#916E99;
+}
+
 p{
     font-size: 20px;
     padding: 10px;
@@ -47,7 +57,7 @@ p{
 
 .right{
     overflow:hidden;
-    width: 23%; /* Adjust width as needed */
+    width: 20%; /* Adjust width as needed */
     background-color: #fff; /* Adjust color as needed */
     padding: 23px;
     box-sizing: border-box;
@@ -58,7 +68,7 @@ p{
 
 .middle{
     overflow:hidden;
-    width: 50%; /* Adjust width as needed */
+    width: 55%; /* Adjust width as needed */
     background-color: #fff; /* Adjust color as needed */
     padding: 20px;
     box-sizing: border-box;
@@ -70,7 +80,7 @@ p{
 
 .left{
     overflow:hidden;
-    width: 23%; /* Adjust width as needed */
+    width: 20%; /* Adjust width as needed */
     background-color: #fff; /* Adjust color as needed */
     padding: 23px;
     box-sizing: border-box;
@@ -85,9 +95,6 @@ p{
     height: 260px;
 }
 
-a:hover, a:active {
-    background-color: #916E99;
-}
 
 h2{
     text-align: center;
@@ -104,7 +111,7 @@ ul{
     background-color: #916E99;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 15px 32px;
+    padding: 12px 29px;
     color: white;
     display: inline-block;
     justify-content: space-between; /* Adjust as needed */
@@ -117,8 +124,8 @@ ul{
 li{
     list-style-type: none;
     justify-content: space-between; /* Adjust as needed */
-    padding-bottom: 20%;
-    padding-top: 20%
+    padding-bottom: 7%;
+    padding-top:7%;
 }
 
 a.button {text-decoration: none;}
