@@ -1,11 +1,16 @@
+*{
+    font-family: arial;
+}
+
 .header {
     padding: 60px;
     text-align: center;
     color: white;
     font-size: 30px;
-    background-image: url("banner.jpg");
+    background-image: url("abbymedia/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: .6;
 }
 
 h1{
@@ -15,15 +20,16 @@ h1{
 }
   
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: Arial;
+    background-color: rgba(149, 110, 157, 0.196);
     margin: 0;
     padding-top: 20px;
 }
 
 .guitar{
-    width: 150px;
-    height: auto;
+    width: auto;
+    height: 520px;
+    position: relative;
 }
 
 p{
@@ -32,15 +38,18 @@ p{
 }
 
 .container {
+    position: relative;
+    overflow:hidden;
     display: flex;
     justify-content: space-between; /* Adjust as needed */
     padding: 5%;
 }
 
 .right{
-    width: 20%; /* Adjust width as needed */
+    overflow:hidden;
+    width: 23%; /* Adjust width as needed */
     background-color: #fff; /* Adjust color as needed */
-    padding: 20px;
+    padding: 23px;
     box-sizing: border-box;
     border: 1px solid #ccc; /* Adjust border as needed */
     border-radius: 5%;
@@ -48,6 +57,7 @@ p{
 }
 
 .middle{
+    overflow:hidden;
     width: 50%; /* Adjust width as needed */
     background-color: #fff; /* Adjust color as needed */
     padding: 20px;
@@ -59,13 +69,20 @@ p{
 }
 
 .left{
-    width: 20%; /* Adjust width as needed */
+    overflow:hidden;
+    width: 23%; /* Adjust width as needed */
     background-color: #fff; /* Adjust color as needed */
-    padding: 20px;
+    padding: 23px;
     box-sizing: border-box;
     border: 1px solid #ccc; /* Adjust border as needed */
     border-radius: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.amp{
+    position: relative;
+    width:auto;
+    height: 260px;
 }
 
 a:hover, a:active {
@@ -83,16 +100,18 @@ ul{
 
 .button{
     text-decoration:none;
-    font-size: larger;
+    font-size: 30px;
     background-color: #916E99;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 15px 32px;
-    text-align: center;
-    border: none;
     color: white;
     display: inline-block;
+    justify-content: space-between; /* Adjust as needed */
+}
 
+.button:hover {
+    background-color:#3c2d3f;
 }
 
 li{
@@ -102,8 +121,5 @@ li{
     padding-top: 20%
 }
 
-
 a.button {text-decoration: none;}
-a.button:link {color:#916E99;}
 a.button:visited {color:white;}
-a.button:hover {font-size:150%;}
