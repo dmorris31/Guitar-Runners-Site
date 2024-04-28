@@ -1,16 +1,16 @@
-* {
-    padding:0; margin:0;
+*{
+    font-family: arial;
 }
 
 body{
-    background-color: #f2f2f2;
+    background-color: rgba(149, 110, 157, 0.196);
     padding-top:50px;
 }
 
 h2{
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 2px;
     font-family: arial;
 }
 
@@ -18,21 +18,60 @@ p{
     padding:5%;
     font-size: 20px;
     font-family:arial;
-    display:flex;
     
 }
 
 .about{
     border-radius: 25px;
     background: #fcfcfc;
-    width: 75%;
+    width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
+    justify-content: center;
+    justify-content: space-between;
 }
 
 .tom{
     width: auto;
     height: auto;
-    margin-left: 15px;
     float: right;
+    border-radius: 25px;
 }
+
+.card {
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    justify-content: space-between;
+}
+  
+.title {
+    color: grey;
+    font-size: 18px;
+}
+  
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+  
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.big{
+    display: flex;
+}
+  
