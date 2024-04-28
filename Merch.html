@@ -18,21 +18,26 @@
     <a href="About.html">About</a>
     <a href="html/shop.html">Shop</a>
     <a href="Merch.html" class="active">Merch</a>
-    <a href="Repair.html">Repair</a>
+    <a href="Service.html">Service</a>
     <a href="FAQ.html">FAQ</a>
     <a href="Discussion.html">Discussion</a>
     <a href="html/lessons.html">Lessons</a>
   </div>
 </div>
   <!-- END OF NAV BAR -->
+  <div style="height: 40px;"></div> <!-- spacer -->
+  <div class="header">
+    <h2 style="font-weight:900; font-size:50px;  -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: black; text-shadow: 5px 5px 7px black; color: white;" >GuitarRunners Merch</h2>
+  </div>
 
-<div style="height: 75px;"></div> <!-- This div acts as a spacer -->
-    <h1>GuitarRunners Merch</h1>
-    <!-- search bar -->
-    <div class="search-bar" >
-        <input type="text" id="searchInput" placeholder="Search clothing..." onkeyup="searchProducts()">
+    
+    <div class="section">
+        <form onsubmit="event.preventDefault();" role="search">
+            <label for="search">Search for stuff</label>
+            <input id="search" type="search" placeholder="Find Merch" autofocus required />
+            <button type="submit">Go</button>    
+        </form>
     </div>
-    <!-- end of search bar -->
 
     <!-- product container -->
     <div class="container" id="productContainer">
@@ -53,7 +58,7 @@
             <p class="price">$24.99</p>
             <div class="colors">
                 <div class="color-circle white"></div>
-                 <div class="color-circle pink"></div>
+                 <div class="color-circle red"></div>
                 <div class="color-circle blue"></div>
                 <div class="color-circle black"></div>
             </div>
@@ -82,58 +87,27 @@
             </div>
         </div>
         <div class="product">
-            <img src="merchData/blue v neck woman.jpg" width="190" height="290" alt="Product Image 2">
-            <h3>Women's Fitted Logo V-neck Top</h3>
-            <p class="price">$26.99</p>
+            <img src="merchData/woman red tee copy 2.jpg" width="190" height="290" alt="Product Image 2">
+            <h3>Women's Fitted Logo Top</h3>
+            <p class="price">$24.99</p>
             <div class="colors">
                 <div class="color-circle grey"></div>
-                <div class="color-circle blue"></div>
+                <div class="color-circle pink"></div>
                 <div class="color-circle white"></div>
                 <div class="color-circle black"></div>
             </div>
         </div>
         <div class="product">
-            <img src="merchData/black v neck man.jpg" width="190" height="290" alt="Product Image 2">
-            <h3>Men's Fitted Logo V-neck Top</h3>
-            <p class="price">$26.99</p>
+            <img src="merchData/woman red tee copy 2.jpg" width="190" height="290" alt="Product Image 2">
+            <h3>Men's Fitted V-neck Top</h3>
+            <p class="price">$24.99</p>
             <div class="colors">
+                <div class="color-circle grey"></div>
+                <div class="color-circle pink"></div>
                 <div class="color-circle white"></div>
                 <div class="color-circle black"></div>
             </div>
         </div>
-         <div class="product">
-            <img src="merchData/grey hoodie.jpg" width="190" height="270" alt="Product Image 2">
-            <h3>Unisex Adults GuitarRunners Hoodie</h3>
-            <p class="price">$29.99</p>
-            <div class="colors">
-                <div class="color-circle white"></div>
-                <div class="color-circle black"></div>
-                <div class="color-circle grey"></div>
-                <div class="color-circle blue"></div>
-            </div>
-        </div>
-        <div class="product">
-            <img src="merchData/grey hoodie.jpg" width="180" height="270" alt="Product Image 2">
-            <h3>Unisex Youth GuitarRunners Hoodie</h3>
-            <p class="price">$25.99</p>
-            <div class="colors">
-                <div class="color-circle white"></div>
-                <div class="color-circle black"></div>
-                <div class="color-circle grey"></div>
-                <div class="color-circle blue"></div>
-            </div>
-        </div>
-        <div class="product">
-            <img src="merchData/red woman sweatshirt.jpg" width="150" height="270" alt="Product Image 2">
-            <h3>Unisex Adults GuitarRunners Pullover</h3>
-            <p class="price">$25.99</p>
-            <div class="colors">
-                <div class="color-circle red"></div>
-                <div class="color-circle black"></div>
-                <div class="color-circle grey"></div>
-            </div>
-        </div>
-        <!-- add more products here if needed -->
     </div>
 
 <!--  js functions -->

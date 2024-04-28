@@ -1,4 +1,4 @@
-/* Navbar styling */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000; /* Ensure navbar stays on top */
+  z-index: 1000; 
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
 }
@@ -30,8 +30,8 @@
 .pages a {
   color: white;
   text-decoration: none;
-  padding: 10px 12px; /* Adjust padding for smaller options */
-  font-size: 14px; /* Adjust font size for smaller options */
+  padding: 10px 12px; 
+  font-size: 14px; 
 }
 
 .pages a:hover {
@@ -45,7 +45,7 @@
   border-radius: 10px;
 }
 
-/* Responsive navigation icon */
+
 .navbar .icon {
   display: none;
 }

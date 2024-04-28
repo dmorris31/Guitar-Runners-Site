@@ -1,68 +1,169 @@
+
 body {
-            font-family: Arial, sans-serif;
-            background-color: rgba(149, 110, 157, 0.196);/* Background color for the page */
-            margin: 0;
-            padding: 10px;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 220px;
-
-        }
-        .product {
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 10px;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            width: 300px;  /* container width */
-            height: 365px; /* container height */
-        }
-        h2 {
-            color: #333;
-        }
-        .price {
-            color: green;
-        }
-        .colors {
-            margin-top: 10px;
-        }
-        .color-circle {
-            height: 20px;
-            width: 20px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            border: 1px solid black;
-        }
-        .red { background-color: #ff0000; }
-        .blue { background-color: #0000ff; }
-        .black { background-color: #000000; }
-        .white { background-color: #ffffff; }
-        .green { background-color: #008000; }
-        .yellow { background-color: #ffff00; }
-        .grey { background-color: #808080; }
-        .pink { background-color: #ff6699; }
-        img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .search-bar {
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-        }
-
-* {
-    padding:0; margin:0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(149, 110, 157, 0.196); 
+    margin: 0;
+    overflow-x: hidden; 
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    margin-right: -10px; 
+    margin-left: -10px; 
+    padding: 20px;
+}
 
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 300px; 
+}
 
+.section {
+    background-color: #916E99;
+    background-size: cover;
+    height: 150px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+h2 {
+    color: #333;
+}
+
+.price {
+    color: green;
+}
+
+.colors {
+    margin-top: 10px;
+}
+
+.color-circle {
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.red { background-color: #ff0000; }
+.blue { background-color: #0000ff; }
+.black { background-color: #000000; }
+.white { background-color: #ffffff; }
+.green { background-color: #008000; }
+.yellow { background-color: #ffff00; }
+.grey { background-color: #808080; }
+.pink { background-color: #ff6699; }
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.header {
+    background-image: url('devonmedia/merch.jpg');
+    background-size: cover;
+    height: 205px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center bottom 60%;
+}
+
+.header h1 {
+    color: #000000;
+    text-align: center;
+    margin: 0;
+}
+
+:root {
+    --rad: .7rem;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #57bd84;
+    --font-fam: 'Lato', sans-serif;
+    --height: 5rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+  }
+  
+  
+  form {
+    position:sticky;
+    width: 30rem;
+    border-radius: var(--rad);
+  }
+  input, button {
+    height: 40px;
+    font-family: var(--font-fam);
+    border: 0;
+    color: var(--color-dark);
+    font-size: 1rem;
+  }
+  input[type="search"] {
+    outline: 0;
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none; 
+    transition: all var(--dur) var(--bez);
+    transition-property: 90%, 10px;
+    z-index: 1;
+    position: relative;
+  }
+  button {
+    display: none; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: #ddaae9;
+    border-radius: 0 var(--rad) var(--rad) 0;
+  }
+  input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    + button {
+      display: block;
+    }
+  }
+  label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }

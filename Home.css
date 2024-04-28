@@ -10,7 +10,6 @@
     background-image: url("abbymedia/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .6;
 }
 
 h1{
@@ -51,28 +50,28 @@ p{
     position: relative;
     overflow:hidden;
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: space-between;
     padding: 5%;
 }
 
 .right{
     overflow:hidden;
-    width: 20%; /* Adjust width as needed */
-    background-color: #fff; /* Adjust color as needed */
+    width: 20%;
+    background-color: #fff;
     padding: 23px;
     box-sizing: border-box;
-    border: 1px solid #ccc; /* Adjust border as needed */
+    border: 1px solid #ccc; 
     border-radius: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .middle{
     overflow:hidden;
-    width: 55%; /* Adjust width as needed */
-    background-color: #fff; /* Adjust color as needed */
+    width: 55%;
+    background-color: #fff; 
     padding: 20px;
     box-sizing: border-box;
-    border: 1px solid #ccc; /* Adjust border as needed */
+    border: 1px solid #ccc; 
     display:flex;
     border-radius: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -80,11 +79,11 @@ p{
 
 .left{
     overflow:hidden;
-    width: 20%; /* Adjust width as needed */
-    background-color: #fff; /* Adjust color as needed */
+    width: 20%; 
+    background-color: #fff;
     padding: 23px;
     box-sizing: border-box;
-    border: 1px solid #ccc; /* Adjust border as needed */
+    border: 1px solid #ccc;
     border-radius: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -114,7 +113,7 @@ ul{
     padding: 12px 29px;
     color: white;
     display: inline-block;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: space-between; 
 }
 
 .button:hover {
@@ -123,7 +122,7 @@ ul{
 
 li{
     list-style-type: none;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: space-between; 
     padding-bottom: 7%;
     padding-top:7%;
 }

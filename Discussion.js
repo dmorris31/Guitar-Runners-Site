@@ -28,7 +28,7 @@ function postComment(button) {
     $.post("saveDiscussion.php", { topic_id: topicId, name: name, comment: comment }, function (data) {
         alert(data);
         if (data.startsWith("New comment created successfully")) {
-            loadTopics(); // Reload topics only after posting a new comment
+            loadTopics();
         }
     });
 }
