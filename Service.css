@@ -11,27 +11,27 @@ body {
   grid-auto-rows: auto;
   gap: 20px;
   padding: 20px;
-  min-width: 700px; /* Adjust minimum width as needed */
+  min-width: 700px;
 }
 
 .header {
   grid-column: 1 / -1;
   background-image: url('devonmedia/repair.jpg');
   background-size: cover;
-  height: 225px; /* Adjust height as needed */
+  height: 225px; 
   background-position: center bottom 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -20px; /* Adjust margin to compensate for removing padding */
-  margin-right: -20px; /* Adjust margin to compensate for removing padding */
+  margin-left: -20px; 
+  margin-right: -20px; 
 }
 
 .header h1 {
   color: #000000;
   text-align: center;
-  margin: 0; /* Remove default margin */
-  margin-top: 30px;
+  margin: 0; 
+  margin-top: 35px;
 }
 
 .Location,
@@ -142,21 +142,21 @@ form input[type="submit"] {
 
 
 .tabcontent {
-  display: flex; /* Change to flexbox layout */
-  align-items: center; /* Vertically center the content */
-  justify-content: space-between; /* Distribute space between text and image */
-  padding: 10px; /* Adjust padding as needed */
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 10px;
 }
 
 .tabcontent p {
-  width: 60%; /* Adjust text width */
+  width: 60%; 
   color: white;
   float: left;
 }
 
 .picture {
-  max-width: 20%; /* Adjust maximum width of the image */
-  max-height: 100%; /* Adjust maximum height of the image */
+  max-width: 20%; 
+  max-height: 100%;
   margin-left: 15%;
 }
 

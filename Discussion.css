@@ -2,7 +2,7 @@
   grid-column: 1 / -1;
   background-image: url('devonmedia/discusbanner.jpg');
   background-size: cover;
-  height: 250px; /* Adjust height as needed */
+  height: 250px; 
   background-position: center bottom 20%;
   display: flex;
   justify-content: center;
@@ -10,10 +10,8 @@
 }
 
 .header h2 {
-    color: #000000;
     text-align: center;
-    margin: 0; /* Remove default margin */
-    opacity: 100%;
+    margin: 0;
   }
 
 body {
@@ -29,9 +27,8 @@ body {
     color: white;
     display: block;
     background-color: #916E99;
-    overflow: hidden; /* Clear floats */
+    overflow: hidden;
     padding: 20px;
-    
   }
 
 
@@ -43,7 +40,7 @@ body {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Distributes space between FAQ sections */
+    justify-content: space-between;
   }
 
 input[type="text"],
@@ -75,14 +72,14 @@ input[type="submit"]:hover {
     background: #ffffff;
     border-radius: 10px;
     padding: 10px;
-    margin: 0 20px 20px 30px; /* Margin between topics */
-    float: left; /* Float left to make them appear next to each other */
+    margin: 0 20px 20px 30px;
+    float: left; 
     color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     margin-left: 30px;
     width: 550px;
-    flex: 0 0 100px; /* Flex-grow, flex-shrink, flex-basis */
+    flex: 0 0 100px;
 }
 
 .comment {
