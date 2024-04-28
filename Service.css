@@ -18,9 +18,8 @@ body {
   grid-column: 1 / -1;
   background-image: url('devonmedia/repair.jpg');
   background-size: cover;
-  height: 170px; /* Adjust height as needed */
+  height: 225px; /* Adjust height as needed */
   background-position: center bottom 20%;
-  border-bottom: 4px solid #916E99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,20 +28,23 @@ body {
 }
 
 .header h1 {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
-  text-shadow: 1px 1px 2px black;
   margin: 0; /* Remove default margin */
   margin-top: 30px;
 }
 
 .Location,
-.Repair,
-.service {
+.Repair {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service {
+  background-color: #916E99;
+  padding: 20px;
 }
 
 .Location {
@@ -108,9 +110,14 @@ form input[type="submit"] {
   margin-top: 10px;
 }
 
+.service h2 {
+  color: white;
+  margin-top: 5px;
+}
+
 .tab {
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid white;
   margin-bottom: 10px;
 }
 
@@ -122,35 +129,38 @@ form input[type="submit"] {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  color: white;
 }
 
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #5f4964;
 }
 
 .tab button.active {
-  background-color: #ccc;
+  background-color: #5f4964;
 }
 
+
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
+  display: flex; /* Change to flexbox layout */
+  align-items: center; /* Vertically center the content */
+  justify-content: space-between; /* Distribute space between text and image */
+  padding: 10px; /* Adjust padding as needed */
 }
 
 .tabcontent p {
-  width: 75%;
+  width: 60%; /* Adjust text width */
+  color: white;
+  float: left;
 }
 
 .picture {
-  float: right;
-  object-fit: cover;
-  border-radius: 5px;
-  height: 200px;
-  width: 200px;
-  margin-top: -120px;
+  max-width: 20%; /* Adjust maximum width of the image */
+  max-height: 100%; /* Adjust maximum height of the image */
+  margin-left: 15%;
 }
 
+
 .tabcontent h3 {
-  color: #000000;
+  color: #ffffff;
 }

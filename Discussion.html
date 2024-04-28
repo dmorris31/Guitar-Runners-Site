@@ -8,71 +8,45 @@
     <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<!-- START OF NAV BAR -->
 <body>
+
+
+<!-- START OF NAV BAR -->
 <div class="navbar" id="myTopnav">
     <div class="logo">GuitarRunners</div>
     <div class="pages">
-    <a href="Home.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="html/shop.html">Shop</a>
-    <a href="Merch.html">Merch</a>
-    <a href="Repair.html">Repair</a>
-    <a href="FAQ.html">FAQ</a>
-    <a href="Discussion.html" class="active">Discussion</a>
-    <a href="html/lessons.html">Lessons</a>
-  </div>
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="html/shop.html">Shop</a>
+        <a href="Merch.html">Merch</a>
+        <a href="Service.html">Service</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Discussion.html" class="active">Discussion</a>
+        <a href="html/lessons.html">Lessons</a>
+    </div>
 </div>
-  <!-- END OF NAV BAR -->
-
-<div style="height: 75px;"></div> <!-- spacer -->
+<!-- END OF NAV BAR -->
+<header class="header">
+    <h2>Lets Talk!</h2>
+</header>
 
 <div class="container">
-     <h2>Discussion Board</h2>
-    <div style="height: 10px;"></div> <!-- spacer -->
-    <h3>Let's talk about all Things Guitars!</h3>
-    <div style="height: 20px;"></div> <!-- spacer -->
-    <div>
-        <input type="text" id="title" placeholder="Enter title">
-        <input type="text" id="name" placeholder="Your name">
-        <textarea id="subject" placeholder="Write your topic..."></textarea>
-        <button onclick="postTopic()">Post Topic</button>
+    <div class="Discussion">
+        <form id="topicForm">
+            <h2>Start a Topic!</h2>
+            <input type="text" id="title" name="title" placeholder="Enter title">
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <textarea id="subject" name="subject" placeholder="Write your topic..."></textarea>
+            <button type="submit" class="button">Post Topic</button>
+            <div style="height: 20px;"></div>
+        </form>
     </div>
-    <div id="forum"></div>
 </div>
-<script>
-    function postTopic() {
-        const forum = document.getElementById('forum');
-        const title = document.getElementById('title').value;
-        const name = document.getElementById('name').value;
-        const subject = document.getElementById('subject').value;
-        const now = new Date().toLocaleString();
-
-        const postDiv = document.createElement('div');
-        postDiv.classList.add('post');
-        postDiv.innerHTML = `<h3>${title}</h3><p>${subject}</p><p>Posted by <strong>${name}</strong> on <span class="post-time">${now}</span></p><div class="comments"></div><div class="add-comment"><input type="text" placeholder="Your name" class="comment-name"><textarea placeholder="Reply to this topic..." class="comment-text"></textarea><button onclick="postComment(this)">Reply</button></div>`;
-
-        forum.appendChild(postDiv);
-        document.getElementById('title').value = '';
-        document.getElementById('name').value = '';
-        document.getElementById('subject').value = '';
-    }
-
-    function postComment(button) {
-        const name = button.previousElementSibling.previousElementSibling.value;
-        const text = button.previousElementSibling.value;
-        const now = new Date().toLocaleString();
-
-        const commentDiv = document.createElement('div');
-        commentDiv.classList.add('comment');
-        commentDiv.innerHTML = `<p>${text}</p><p>Comment by <strong>${name}</strong> on <span class="comment-time">${now}</span></p>`;
-
-        const commentsContainer = button.parentElement.previousElementSibling;
-        commentsContainer.appendChild(commentDiv);
-
-        button.previousElementSibling.previousElementSibling.value = '';
-        button.previousElementSibling.value = '';
-    }
-</script>
+<div class="topicarea">
+    <div id="forum">
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Discussion.js"></script>
 </body>
 </html>
