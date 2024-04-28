@@ -1,107 +1,100 @@
-body,html {
-            height: 100%;
-            margin: 0;
-            color: black;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-            background: #ebe2eb; /* Background color for the page */
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center;     /* Center vertically */
-        }
-        .container {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            width: 80%;
-
-
-            max-width: 600px;
-        }
-        input[type="text"], textarea {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-        input[type="submit"] {
-            background-color: #5cb85c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            width: 100%;
-        }
-        input[type="submit"]:hover {
-            background-color: #4cae4c;
-        }
-        .post {
-            background: #c6b4cb;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 10px;
-            color: black;
-        }
-        .comment {
-            background: #ddd2e0;
-            border-radius: 10px;
-            padding: 8px;
-            margin-left: 20px;
-            margin-bottom: 5px;
-            color: black;
-        }
-        .time {
-            font-size: 0.8em;
-            color: black;
-        }
-* {
-    padding:10; margin: 0;
+.header {
+  grid-column: 1 / -1;
+  background-image: url('devonmedia/discusbanner.jpg');
+  background-size: cover;
+  height: 250px; /* Adjust height as needed */
+  background-position: center bottom 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.header h2 {
+    color: #000000;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    opacity: 100%;
+  }
+
+body {
+    font-family: Arial, sans-serif, bold;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgba(149, 110, 157, 0.196);
+  }
 
 
-a {
-    text-decoration: none;
+
+.container {
+    color: white;
+    display: block;
+    background-color: #916E99;
+    overflow: hidden; /* Clear floats */
+    padding: 20px;
+    
+  }
+
+
+.container h2 {
+    text-align: center;
 }
 
-li {
-    list-style: none;
+.topicarea {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distributes space between FAQ sections */
+  }
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
 }
 
-.main-nav {
-    width: 250px; background: #916E99;
-    position: absolute;
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
 }
 
-.main-nav a {
-	text-transform: uppercase;
-	letter-spacing: .2em;
-	color: #FFF;
-	display: block;
-	padding: 10px 0 10px 20px;
-	border-bottom: 1px dotted gray;
+input[type="submit"]:hover {
+    background-color: #4cae4c;
 }
 
-.main-nav a:hover {background: #916E99}
-.main-nav-ul ul {display: none;}
-.main-nav-ul li:hover ul {display: block;}
-
-.main-nav-ul ul a:before {
-	content: '\203A';
-	margin-right: 20px;
+.post {
+    box-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 20px 20px 30px; /* Margin between topics */
+    float: left; /* Float left to make them appear next to each other */
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 550px;
+    flex: 0 0 100px; /* Flex-grow, flex-shrink, flex-basis */
 }
 
-.main-nav .sub-arrow:after {
-	content: '\203A';
-	float: right;
-	margin-right: 20px;
-	transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	-moz-transform: rotate(90deg);
+.comment {
+    background: #ddd2e0;
+    border-radius: 10px;
+    padding: 4px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: black;
 }
-.main-nav li:hover .sub-arrow:after {
-	content: '\2039';
+
+.time {
+    font-size: 0.8em;
+    color: black;
 }

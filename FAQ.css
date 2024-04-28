@@ -1,61 +1,176 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(149, 110, 157, 0.196)/* Background color for the page */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(149, 110, 157, 0.196)/* Background color for the page */
 }
 
 .header {
-    background-image: url('devonmedia/FAQ.jpg');
-    background-size: cover;
-    height: 190px; /* Adjust height as needed */
-    border-bottom: 4px solid #916E99;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url('devonmedia/FAQ.jpg');
+  background-size: cover;
+  height: 250px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header h1 {
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-    margin: 0; /* Remove default margin */
-    margin-top: 50px;
+.section {
+  background-color: #916E99;
+  background-size: cover;
+  height: 150px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column; /* Adjust to stack items vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.section h1 {
+  color: white;
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Add spacing between heading and form */
+}
+
+form {
+  width: 30rem;
+  border-radius: var(--rad);
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distributes space between FAQ sections */
 }
 
 .FAQ-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: calc(80% - 40px); /* Adjusted width to consider margins */
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .FAQ-section {
+    width: calc(50% - 20px); /* Adjusted width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .FAQ-section {
+    width: calc(100% - 20px); /* Adjusted width for even smaller screens */
+  }
+}
+
+
+
+.title {
+  color: white;
+  text-align: center;
+  padding: -20px;
+  margin-top: -20px;
+}
+
+.header h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  margin-top: 50px;
 }
 
 .FAQ-section h2 {
-    color: #333;
-    font-size: 24px;
-    margin-top: 0px;
+  color: #333;
+  font-size: 24px;
+  margin-top: 0px;
 }
 
 .FAQ-section .purple-box {
-    background-color: #916E99;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #916E99;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .FAQ-section .purple-box:hover {
-    background-color: #58445d;
+  background-color: #58445d;
 }
 
 .FAQ-section .content {
-    display: none;
-    margin-top: 10px;
+  display: none;
+  margin-top: 10px;
 }
 
 .FAQ-section .content p {
-    margin: 0;
+  margin: 0;
+}
+
+
+
+:root {
+  --rad: .7rem;
+  --dur: .3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-fam: 'Lato', sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+
+form {
+  position:sticky;
+  width: 30rem;
+  border-radius: var(--rad);
+}
+input, button {
+  height: 40px;
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1rem;
+}
+input[type="search"] {
+  outline: 0;
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none; 
+  transition: all var(--dur) var(--bez);
+  transition-property: 90%, 10px;
+  z-index: 1;
+  position: relative;
+}
+button {
+  display: none; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background: #ddaae9;
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+  + button {
+    display: block;
+  }
+}
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
